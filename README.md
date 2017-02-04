@@ -6,19 +6,31 @@ Code for [Machine Learning is Fun! Part 4: Modern Face Recognition with Deep Lea
 
 ## Step 0: Optional steps to easy the rest
 
+1. Install boost:
+    * `brew install boost --with-python3 --with-python`
+    * `brew install boost-python`
 1. Install [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
-2. Install [XQuartz](https://www.xquartz.org/)
-3. Install [dlib](https://npatta01.github.io/2015/08/10/dlib/)
+1. Install [XQuartz](https://www.xquartz.org/)
+1. Create virtual environment:
+```mkvirtualenv --python=`which python3` p3env-ai```
+1. Activate your Python environment: `workon p3env-ai` (p3env-ai is my environment name)
+1. Install a bunch of Python dependencies:
+    * pip install scipy
+    * pip install scikit-image
+    * There might be more...
+1. Install [dlib](https://npatta01.github.io/2015/08/10/dlib/)
+1. Run the examples to see if dlib worked.
 
 ## Step 1: Finding all the faces
 
-Install dependencies (Mac OS X):
+Activate environment:
 
 ```
-brew install boost --with-python
-brew install boost-python
-virtualenv -p python3 p3env
-. p3env/bin/activate
-pip install scikit-image
-pip install dlib
+workon p3env-ai
+```
+
+Run face detection:
+
+```
+python face_detector.py faces/face1.jpg
 ```
