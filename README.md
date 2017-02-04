@@ -28,6 +28,7 @@ pip install scipy
 pip install scikit-image
 
 # dlib (see https://npatta01.github.io/2015/08/10/dlib/)
+# cd to a directory where you can clone the dlib repo
 git clone git@github.com:davisking/dlib.git
 cd dlib
 python setup.py install --yes DLIB_JPEG_SUPPORT  # takes a long time
