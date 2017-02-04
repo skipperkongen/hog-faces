@@ -22,14 +22,15 @@ source /usr/local/bin/virtualenvwrapper.sh  # add to .bash_profile
 mkvirtualenv --python=`which python3` p3env-ai
 workon p3env-ai
 
-# Dependencies
+# dlib dependencies
+pip install numpy
 pip install scipy
 pip install scikit-image
 
 # dlib (see https://npatta01.github.io/2015/08/10/dlib/)
 git clone git@github.com:davisking/dlib.git
 cd dlib
-python setup.py install --yes DLIB_JPEG_SUPPORT
+python setup.py install --yes DLIB_JPEG_SUPPORT  # takes a long time
 ```
 
 ## Step 1: Finding all the faces
